@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+            <meta charset="utf-8">
+        <script src="/app/js/jquery-3.4.1.js"></script>
+        <script src="/app/js/new.js"></script>
+        <script src="/app/js/vue.js"></script>
+    </head>
+    <body>
+        <h1>Complex Type</h1>
+        <form id="form">
+            <input v-model="form.title" type="text" name="title" placeholder="title" /><br />
+            <input v-model="form.creator" type="text" name="creator" placeholder="creator" />
+            <div v-for="source in form.sources">
+                    <input v-model="source.code" type="text" name="sources[0].YouTube.url" placeholder="Source" /> 
+                    <input v-model="source.code" type="text" name="sources[0].YouTube.url" placeholder="UID" /> 
+                    <input v-model="source.access" type="text" name="sources[0].YouTube.whoCanAccess[0]" placeholder="whoCanAccess" />
+            </div>
+            <button @click="addSource()" type="button">+</button>
+            <button type="button">Submit</button>
+        </form>
+    </body>
+</html>
+

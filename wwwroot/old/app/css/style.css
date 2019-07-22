@@ -1,0 +1,128 @@
+html {
+	font-family: Roboto, Arial, sans-serif;
+}
+html > * {
+	box-sizing:  border-box;
+}
+body {
+padding: 0; 
+margin: 0;
+}
+.wrapper {
+display: flex;  
+flex-flow: row wrap;
+font-weight: bold;
+text-align: center;
+}
+.wrapper > * {
+flex: 1 100%;
+}
+.main {
+	margin: 10px;
+	margin-right: 0;
+  width: 70%;
+}
+.main > div > div {
+  width:100%;
+  padding-top:56.25%;
+  position: relative;
+}
+.main > div > div > .Item {
+  position:absolute;width:100%;height:100%;top:0;left:0;
+}
+content-source > div {
+	float: right;
+}
+.main > div {
+	text-align: left;
+}
+.main > div > content-title {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 1000;
+	margin: 10px;
+	
+}
+.header {
+background: tomato;
+height: 30px;
+text-align: left;
+}
+.header > logo {
+	top: 10px;
+	left: 10px;
+	font-size: 30px;
+}
+.footer {
+background: lightgreen;
+}
+
+
+.aside-1 {
+
+	background: gold;
+}
+
+.aside-2 {
+	margin: 10px;
+	background: whitesmoke;
+}
+.aside-2 > h3 {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	border-bottom: 2px, solid, gray;
+}
+.aside-2 > h3 ::before {
+	background-color: black;
+	height: 2px;
+	width: 100%;
+}
+.aside-2 > .Item-preview {
+	background: white;
+	display: flex;
+	margin: 10px;
+}
+.aside-2 > .Item-preview > * {
+	flex: 1 100%;
+}
+.aside-2 > .Item-preview > .Item-info > h3 {
+	top: 0;
+	padding-left: 10px;
+	padding-top: 5px;
+	margin: 0;
+	text-align: left;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 1000;
+	line-height: 1.5rem;
+}
+.aside-2 > .Item-preview > .Item-info > p {
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+	text-align: left;
+	align-self: left;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1rem;
+	color: grey;
+}
+.aside-2 > .Item-preview > img {
+	position: relative;
+}
+@media all and (min-width: 600px) {
+.aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+.main    { flex: 2 0px; }
+.aside-1 { order: 1; } 
+.main    { order: 2; }
+.aside-2 { order: 3; }
+.footer  { order: 4; }
+}
+
+
