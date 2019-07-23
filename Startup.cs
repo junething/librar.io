@@ -19,9 +19,6 @@ namespace LibrarioAPI {
 			Configuration = configuration;
 		}
 
-		readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; 
-
-
 		public IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
@@ -36,16 +33,14 @@ namespace LibrarioAPI {
 
 			services.AddSingleton<ItemService> ();
 			services.AddSingleton<ValueService> ();
+			services.AddSingleton<UserService> ();
 
-			services.AddCors(options =>
+			services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 			{
-				options.AddPolicy(MyAllowSpecificOrigins,
-				builder =>
-				{
-					builder.WithOrigins("http://localhost:8080",
-										"http://www.contoso.com");
-				});
-			});
+				builder.AllowAnyOrigin()
+					.AllowAnyMethod()
+					.AllowAnyHeader();
+			}));
 
 			services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_1);
 		}
@@ -60,8 +55,8 @@ namespace LibrarioAPI {
 			}
 			app.UseStaticFiles ();
 
-			app.UseCors(MyAllowSpecificOrigins);
-
+			app.UseCors("MyPolicy");
+			
 			app.UseMvc (routes =>
 			{
 				routes.MapRoute ("default", "api/v/{action?}/{id?}", defaults: new { controller = "Item"});

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-			<main-header></main-header>
+			
 			<div class="main" id="main">
 					<div v-if="contentLoaded">
 					<div class= "aspect-ratio">		
@@ -28,14 +28,12 @@
 <script>
 import ItemDisplay from '../components/ItemDisplay.vue'
 import SuggestionsSidebar from '../components/SuggestionsSidebar.vue'
-import MainHeader from '../components/Header.vue'
 import info from '../scripts/general_info.js'
 export default {
   name: 'ContentPage',
   components: {
     ItemDisplay,
 	SuggestionsSidebar,
-	MainHeader
   },
   data () {
     return {

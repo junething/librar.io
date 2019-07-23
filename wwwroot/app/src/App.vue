@@ -1,9 +1,16 @@
 <template>
-	<router-view></router-view>
+	<div>
+		<main-header></main-header>
+		<router-view></router-view>
+	</div>
 </template>
 <script>
+import MainHeader from './components/Header.vue'
 export default {
-	name: 'ItemBox',
+	name: 'App',
+	components: {
+	MainHeader,
+	}
 }
 </script>
 

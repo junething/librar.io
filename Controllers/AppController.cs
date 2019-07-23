@@ -9,7 +9,7 @@ namespace LibrarioAPI.Controllers {
 		// GET api/values
 		public IActionResult Spa ()
 		{
-			return File ("~/app/spa-main.html", "text/html");
+			return File ("~/app/public/index.html", "text/html");
 		}
 
 		// GET api/values/5

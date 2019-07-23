@@ -16,6 +16,7 @@ import ContentPage from './pages/ContentPage.vue'
 import PublishPage from './pages/PublishPage.vue'
 import HomePage from './pages/HomePage.vue'
 import CreateAccount from './pages/CreateAccount.vue'
+import Login from './pages/Login.vue'
 // 2. Define some routes
 // Each route should map to a component. The "component" can
 // either be an actual component constructor created via
@@ -26,6 +27,7 @@ const routes = [
   { path: '/bar', component: Bar },
   { path: '/publish', component: PublishPage },
   { path: '/signup', component: CreateAccount },
+  { path: '/login', component: Login },
   { path: '/i/*', component: ContentPage },
   
 ]
