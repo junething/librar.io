@@ -1,6 +1,6 @@
 # Librar.io
 
-An unfinished website designed to collate educational content from around the internet. Biult using C#/HTML/CSS, ASP.NET Core and Blazor
+An unfinished website designed to collate educational content from around the internet. Built using Vue.js and ASP.NET.
 
 Has the ability to embed content from YouTube, Vimeo, Peertube, Soundcloud and more with a unified comment section, access and sharing system.
 
