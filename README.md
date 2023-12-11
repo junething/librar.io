@@ -1,6 +1,6 @@
 # Librar.io
 
-A prototype of a website designed to collate educational content from around the internet.
+An unfinished website designed to collate educational content from around the internet. Biult using C#/HTML/CSS, ASP.NET Core and Blazor
 
 Has the ability to embed content from YouTube, Vimeo, Peertube, Soundcloud and more with a unified comment section, access and sharing system.
 
